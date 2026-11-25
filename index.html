@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Linda Eli 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-family: Georgia, serif;
+  color: white;
+  background: linear-gradient(135deg, #170d29, #55264f, #24112e);
+  overflow: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#ffc4e4 1px, transparent 1px);
+  background-size: 65px 65px, 100px 100px;
+  background-position: 0 0, 30px 40px;
+  animation: sparkle 4s infinite alternate;
+}
+
+@keyframes sparkle {
+  from { opacity: .3; }
+  to { opacity: 1; }
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 470px;
+  padding: 40px 25px;
+  text-align: center;
+  border: 1px solid #ffffff40;
+  border-radius: 28px;
+  background: #ffffff12;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 60px #0006;
+}
+
+.subtitle {
+  color: #ffc5e5;
+  letter-spacing: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px, 10vw, 55px);
+  margin: 22px 0;
+  color: #ffd4ec;
+  text-shadow: 0 0 20px #ff8dc9;
+}
+
+.flower {
+  font-size: 65px;
+  margin: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-10px); }
+}
+
+.description {
+  color: #f8eaf4;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(120deg, #ffd4eb, #f58dc5);
+  color: #552044;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  display: none;
+  margin-top: 25px;
+  line-height: 1.8;
+  color: #ffe5f3;
+  font-family: Arial, sans-serif;
+  animation: appear 1s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+  font-size: 30px;
+  margin-top: 18px;
+}
+
+footer {
+  margin-top: 30px;
+  color: #eac8df;
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<main class="card">
+
+  <div class="subtitle">Un pequeño detalle para ti</div>
+
+  <div class="flower">🌷</div>
+
+  <h1>My Linda Eli</h1>
+
+  <p class="description">
+    Hay personas que tienen algo especial,
+    una belleza que no pasa desapercibida.
+  </p>
+
+  <button onclick="mostrarMensaje()">
+    Tengo algo que decirte 💗
+  </button>
+
+  <div class="message" id="mensaje">
+    <p>
+      Eli, por ahora hay algo que puedo decirte:
+      eres hermosa.
+      <br><br>
+      Me encanta tu cabello y esa mirada
+      que tiene algo difícil de explicar.
+      <br><br>
+      Quizás todavía me falten palabras
+      para describir todo lo que me parece
+      especial de ti. ✨
+    </p>
+
+    <div class="heart">❤️</div>
+  </div>
+
+  <footer>
+    Una página hecha especialmente para Eli ✨
+  </footer>
+
+</main>
+
+<script>
+function mostrarMensaje() {
+  document.getElementById("mensaje").style.display = "block";
+}
+</script>
+
+</body>
+</html>
